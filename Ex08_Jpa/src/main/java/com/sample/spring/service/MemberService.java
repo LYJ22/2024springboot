@@ -40,4 +40,5 @@ public class MemberService {
 		Page<Member> member = memberRepository.findByNameLike(search, pageable);
 		return member;
 	}
+	
 }
