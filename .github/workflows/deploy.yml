@@ -14,7 +14,9 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
-          script: cd /home/ubuntu/2024springboot
+          script_stop: true
+          script: |
+            cd /home/ubuntu/2024springboot
             git pull origin main
-            cd ./Ex11_Food
+            cd Ex11_Food
             ./gradlew bootwar
