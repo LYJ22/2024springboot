@@ -3,6 +3,7 @@ package com.sample.spring.service;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -45,6 +46,10 @@ public class FileDataService {
 		
 		log.info("download fileData success!! " + filePath);
 		return Files.readAllBytes(new File(filePath).toPath());
+	}
+
+	public List<FileEntity> findAll() {
+		return fileDataRepository.findAll();
 	}
 	
 	
