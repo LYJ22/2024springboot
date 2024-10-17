@@ -27,7 +27,7 @@ public class Member {
 	private String nickname;
 	private boolean social;
 	
-	@ElementCollection(fetch = FetchType.LAZY)
+	@ElementCollection(fetch= FetchType.LAZY)
 	@Builder.Default
 	private List<MemberRole> memberRoleList = new ArrayList<>();
 	
@@ -50,6 +50,5 @@ public class Member {
 	public void changeSocial(boolean social) {
 		this.social = social;
 	}
-	
 	
 }
